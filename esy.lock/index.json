@@ -1,6 +1,6 @@
 {
   "checksum": "491853fdab8dffff2a355e5ceeff14a3",
-  "root": "hello-reason@link-dev:./package.json",
+  "root": "libs-with-esy@link-dev:./package.json",
   "node": {
     "refmterr@3.2.2@d41d8cd9": {
       "id": "refmterr@3.2.2@d41d8cd9",
@@ -36,9 +36,9 @@
       "dependencies": [],
       "devDependencies": []
     },
-    "hello-reason@link-dev:./package.json": {
-      "id": "hello-reason@link-dev:./package.json",
-      "name": "hello-reason",
+    "libs-with-esy@link-dev:./package.json": {
+      "id": "libs-with-esy@link-dev:./package.json",
+      "name": "libs-with-esy",
       "version": "link-dev:./package.json",
       "source": {
         "type": "link-dev",

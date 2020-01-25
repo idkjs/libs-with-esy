@@ -1,13 +1,37 @@
-# hello-reason
+# libs-with-esy
 
-[![Build Status](https://dev.azure.com/esy-ocaml/esy-ocaml/_apis/build/status/esy-ocaml.hello-reason?branchName=master)](https://dev.azure.com/esy-ocaml/esy-ocaml/_build/latest?definitionId=1?branchName=master)
+[![Build Status](https://dev.azure.com/esy-ocaml/esy-ocaml/_apis/build/status/esy-ocaml.libs-with-esy?branchName=master)](https://dev.azure.com/esy-ocaml/esy-ocaml/_build/latest?definitionId=1?branchName=master)
 
 A project which demonstrates a Reason workflow with [Esy][].
 
 [Esy]: https://github.com/esy-ocaml/esy
 
+[Native Workflow](https://reasonml.github.io/docs/en/quickstart-ocaml) found in link which we are trying to adhere to.
 
 ## Usage
+
+```sh
+➜  GitHub git clone https://github.com/esy-ocaml/hello-reason.git libs-with-esy
+Cloning into 'libs-with-esy'...
+remote: Enumerating objects: 47, done.
+remote: Counting objects: 100% (47/47), done.
+remote: Compressing objects: 100% (38/38), done.
+remote: Total 1044 (delta 27), reused 21 (delta 9), pack-reused 997
+Receiving objects: 100% (1044/1044), 260.62 KiB | 3.34 MiB/s, done.
+Resolving deltas: 100% (534/534), done.
+➜  GitHub cd libs-with-esy
+➜  libs-with-esy [master]rm -rf .git
+# at this point I search for `hello-reason` and changed it to `libs-with-esy` then changed `hello-reason.opam` and `hello-reason.install` to `libs-with-esy.opam` and `libs-with-esy.install`. See note just below.
+➜  libs-with-esy [master]esy
+info esy 0.6.0 (using package.json)
+info fetching: done
+info installing: done
+➜  libs-with-esy [master]esy test
+Running Test Program:
+Hello, World!
+```
+
+Note: Changing the `package.json` name seems to break the project. Build system seems to be referring to it to build `.opam` files. Not very `get started` friendly if that is the case.
 
 You need Esy, you can install the beta using [npm](https://npmjs.com):
 
@@ -57,13 +81,13 @@ no dependencies.
     % npm publish
 
 ## Continuous Integration:
-`hello-reason` includes CI configuration for Azure
+`libs-with-esy` includes CI configuration for Azure
 [DevOps](https://dev.azure.com) pipelines out of the box.
 
 - Create your Azure DevOps account.
 - Add a new project, and point that new Azure DevOps project to your github
   repo that includes the CI (`./azure-pipelines.yml` and the `.ci/` directory)
-  from `hello-reason`.
+  from `libs-with-esy`.
 - Create a new Pipeline within that project.
   - When asked how to configure the new pipeline, select the option to use
     existing configuration inside the repo.
